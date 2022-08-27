@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const Main = () => {
+const Main = ({test , fecha}) => {
+    console.log(test);
+    console.log(fecha);
     return (
         <section>
-            <h1> Te damos la bienvenida a Tienda Tiggy </h1>
+            <h3> Espero que tengas un buen dia </h3>
+            <h2>{test}. Hoy es {fecha}</h2>
         </section>
-    )
-}
+    );
+};
 
 export default Main
