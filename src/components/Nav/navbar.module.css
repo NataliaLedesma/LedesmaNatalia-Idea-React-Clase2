@@ -4,3 +4,8 @@
     padding-left: 1rem;
     
 }
+
+span:hover {
+    background-color: rgba(135, 135, 135, 0.473);
+    transition: 0.5s;
+}
