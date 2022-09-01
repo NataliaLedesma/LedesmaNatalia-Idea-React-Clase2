@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 
 
-const ItemCount = () => {
+const ItemCount = ({stock}) => {
 
         const [initial, setInitial] = useState(0);
-
-        let stock = 10;
 
         const sumar = () => {
             initial < stock && setInitial(initial + 1);
@@ -13,7 +11,7 @@ const ItemCount = () => {
 
         const restar = () => {
             initial > 0 && setInitial(initial - 1);
-        };
+        }; 
 
         const onAdd = (initial) => {
             alert("Se agregaron los productos al carrito")

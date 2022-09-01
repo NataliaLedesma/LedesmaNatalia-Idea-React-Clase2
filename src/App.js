@@ -9,7 +9,7 @@ const App = () => {
       <Header />  
       <ItemListContainer
         saludo="Te damos la bienvenida a Tienda Tiggy "/>
-      <ItemCount />
+      <ItemCount stock={10}/>
       <Footer />  
         
     </>
