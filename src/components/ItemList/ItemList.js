@@ -4,7 +4,7 @@ import Item from '../Item/Item'
 const ItemList = (props) => {
     const {items} = props
     return (
-        <div>
+        <div class="containerList" >
             {
                 items.map((item) => {
                     return (
