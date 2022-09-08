@@ -11,6 +11,7 @@ const ItemDetail = (props) => {
             <h5>${itemDetail.price}.-</h5>
             <img src={itemDetail.img} alt="" />
 
+
         </div>
     )
 }

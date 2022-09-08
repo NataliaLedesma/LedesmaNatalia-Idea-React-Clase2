@@ -1,20 +1,17 @@
 import Footer from './components/Footer/Footer';
+import Main from './components/Main/Main';
 import Header from './components/Header/Header';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter } from 'react-router-dom';
+
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Header />  
-      <ItemListContainer
-        saludo="Te damos la bienvenida a Tienda Tiggy "/>
-      <ItemDetailContainer />
-      <ItemCount stock={10}/>
+      <Main />
       <Footer />  
         
-    </>
+    </BrowserRouter>
 
 );
 

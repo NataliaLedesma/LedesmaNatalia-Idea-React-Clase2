@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import products from '../../mock/products';
 import ItemDetail from '../iItemDetail/ItemDetail';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetailContainer = () => {
     const [itemDetail, setItemDetail] = useState({})
-
+    const {idProducto} = useParams()
+    
     useEffect(() => {
         const getProducts = new Promise((res, rej) => {
             setTimeout(() => {
@@ -14,7 +17,7 @@ const ItemDetailContainer = () => {
 
         getProducts
             .then((products) => {
-                const unicoProducto = products.find((producto) => producto.id === 3)
+                const unicoProducto = products.find((producto) => producto.id === idProducto)
                 setItemDetail(unicoProducto);
             })
             .catch((error) => {
@@ -24,7 +27,7 @@ const ItemDetailContainer = () => {
             .finally(() => {
             
             });
-    }, []);
+    }, [idProducto]);
 
     console.log(itemDetail);
 
@@ -34,6 +37,7 @@ const ItemDetailContainer = () => {
             <div>
                 
                 <ItemDetail itemDetail={itemDetail} />
+                <ItemCount stock={10} />
             </div>
 
         </div>

@@ -1,28 +1,35 @@
 import React, { useEffect, useState } from 'react';
+import {useParams} from 'react-router-dom';
 import products from '../../mock/products';
 import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = ({ saludo }) => {
     const [items, setItems] = useState([])
 
-    useEffect(() => {
-        const getProducts = new Promise((res, rej) => {
-            setTimeout(() => {
-                res(products);
-            }, 2000);
-        });
+    const {categoryId} = useParams() 
 
-        getProducts
-            .then((data) => {
-                setItems(data);
-            })
-            .catch((error) => {
-            
-            })
-            .finally(() => {
-            
+    useEffect(() => { 
+            const getProducts = new Promise((res, rej) => {
+                const prodFiltrados = products.filter( (prod) => (prod.category === categoryId) )
+                
+                setTimeout(() => { 
+                    res(categoryId ? prodFiltrados : products);
+                }, 2000);
             });
-    }, []);
+    
+            getProducts
+                .then((data) => {
+                    setItems(data);
+                })
+                .catch((error) => {
+                
+                })
+                .finally(() => {
+                
+                });
+
+        
+    }, [categoryId]);
 
     console.log(items);
 
