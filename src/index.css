@@ -18,3 +18,10 @@ body {
   height: 422px;
   width: 273px;
 }
+
+
+/*CartWidget*/
+.formCart{
+  display: flex;
+  justify-content: space-around;
+}

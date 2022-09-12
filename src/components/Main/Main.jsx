@@ -2,10 +2,12 @@ import React from 'react';
 import { Routes , Route } from 'react-router-dom';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import Form from '../Form/Form';
 
 const Main = () => {
     return (
         <div>
+            <Form />
             <Routes>
                 <Route path='/' element={<ItemListContainer
                     saludo="Te damos la bienvenida a Tienda Tiggy " />} 

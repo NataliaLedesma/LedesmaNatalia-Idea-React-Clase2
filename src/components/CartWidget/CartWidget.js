@@ -3,9 +3,12 @@ import React from 'react';
 
 const CartWidget = () => {
     return (
-        <span class="material-symbols-outlined">
-        shopping_cart
-        </span>
+
+            <span class="material-symbols-outlined">
+            shopping_cart
+            </span>
+
+
     );
 };
 
