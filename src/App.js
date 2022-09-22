@@ -2,7 +2,7 @@ import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
 import Header from './components/Header/Header';
 import { BrowserRouter } from 'react-router-dom';
-import CartProvider from './content/CartContext';
+import CartProvider from './context/CartContext';
 
 
 const App = () => {
