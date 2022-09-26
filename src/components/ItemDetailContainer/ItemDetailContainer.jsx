@@ -25,9 +25,6 @@ const ItemDetailContainer = () => {
             });
     }, [idProducto]);
 
-    console.log(itemDetail);
-
-
     return (
         <div>
             <div>
