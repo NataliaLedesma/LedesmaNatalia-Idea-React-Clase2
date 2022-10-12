@@ -15,7 +15,7 @@ const CartWidget = () => {
 
     useEffect(() => {
         setCantidadCarrito(total) 
-        console.log(total)
+        
     }, [total]);
 
 

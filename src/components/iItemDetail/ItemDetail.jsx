@@ -14,11 +14,11 @@ const ItemDetail = ({ itemDetail }) => {
 
 
     const onAdd = (cantidad) => {
-        console.log(cantidad);
+        
         setCantidad(cantidad);
         addToCart(itemDetail, cantidad);
     };
-    console.log(cart)
+    
 
     return (
         <div key={itemDetail.id}>

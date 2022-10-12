@@ -25,13 +25,13 @@ const ItemListContainer = ({ saludo }) => {
             setItems(products);
         })
         .catch((error) => {
-            console.log(error);
+    
         });
 
 
     }, [categoryId]);
 
-    console.log(items);
+    
 
 
     return (
